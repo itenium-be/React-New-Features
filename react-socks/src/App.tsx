@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import SocksListing from './components/SocksListing';
+import SockPage from './components/SockPage';
+
+const Header: React.FC = () => (
+  <div className="nav-bar">
+    <h1>
+      <Link to="/">React Socks</Link>
+    </h1>
+  </div>
+);
+
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+
+      <Route exact path="/" component={SocksListing} />
+      <Route path="/socks/:id" component={SockPage} />
+    </Router>
   );
 }
 
