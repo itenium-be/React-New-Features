@@ -149,3 +149,13 @@ a.next {
     height: 30px;
   }
 }
+
+.spinner {
+  margin: auto;
+  margin-top: 20px;
+  width: 200px;
+
+  .fa-spinner {
+    font-size: 150px;
+  }
+}

@@ -16,7 +16,7 @@ const SockVariantSelector: React.FC<SockVariantSelectorProps> = ({ sock, variant
                 <div
                     key={v.id}
                     className={cn('color-box', {active: v.id === variant.id})}
-                    style={{backgroundColor: v.color}}
+                    style={{backgroundColor: v.fancyColor}}
                     onMouseEnter={() => setVariant(v)}
                 />
             ))}

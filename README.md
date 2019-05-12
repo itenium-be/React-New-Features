@@ -18,6 +18,6 @@ create-react-app
 npx create-react-app react-socks --typescript
 
 cd react-socks
-npm install --save react-router-dom
+npm install react-router-dom --save
 npm install node-sass --save
 ```

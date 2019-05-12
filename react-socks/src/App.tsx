@@ -1,15 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './components/Header';
+
 import SocksListing from './components/SocksListing';
 import SockPage from './components/SockPage';
-
-const Header: React.FC = () => (
-  <div className="nav-bar">
-    <h1>
-      <Link to="/">React Socks</Link>
-    </h1>
-  </div>
-);
 
 
 const App: React.FC = () => {

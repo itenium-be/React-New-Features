@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { productList } from '../assets/socks-data';
 import { SockModel } from '../models';
 import SockLine from './SockLine';

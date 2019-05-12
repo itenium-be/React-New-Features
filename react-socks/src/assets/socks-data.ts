@@ -26,6 +26,17 @@ export const productList: SockModel[] = [{
 },
 {
   id: 3,
+  name: "React Socks",
+  brand: "React",
+  price: 9,
+  variants: [
+    {id: 1, color: "blue", fancyColor: "#23A3AC"},
+  ],
+  inventory: 5,
+  reviews: []
+},
+{
+  id: 4,
   name: "npm Socks",
   brand: "npm",
   price: 3,
