@@ -128,3 +128,24 @@ a.next {
 .error {
   color: rgb(233, 12, 12);
 }
+
+.product-listing {
+  max-width: 400px;
+  margin: auto;
+  padding: 25px;
+}
+
+.product-line {
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 7px;
+
+  h2 {
+    display: inline;
+  }
+
+  button {
+    float: right;
+    height: 30px;
+  }
+}

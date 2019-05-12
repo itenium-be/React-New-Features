@@ -8,9 +8,14 @@ type SockProps = {
 
 const SockLine: React.FC<SockProps> = ({ sock }) => {
     return (
-        <Link to={'/socks/' + sock.id}>
-            {sock.name}
-        </Link>
+        <div className="product-line">
+            <h2>
+                {sock.name}
+            </h2>
+            <Link to={'/socks/' + sock.id}>
+                <button>Details</button>
+            </Link>
+        </div>
     );
 }
 
