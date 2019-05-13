@@ -20,3 +20,9 @@ export interface SockReviewModel {
   rating: number;
   fullReview: string;
 }
+
+
+export interface CartModel {
+  sock: SockModel;
+  variant: SockVariantModel;
+}

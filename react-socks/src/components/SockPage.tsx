@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ProductRepository from '../ProductRepository';
 import { SockModel, SockVariantModel } from '../models';
 import SockReviews from './SockReviews';
 import SockVariantSelector from './SockVariantSelector';
+import SockInventory from './SockInventory';
+import ErrorBoundary from './ErrorBoundary';
 
 type SockPageProps = {
     match: { params: { id: string } }
@@ -20,6 +22,10 @@ const SockPage: React.FC<SockPageProps> = ({ match }) => {
             </div>
             <div className="product-info">
                 <h1>{sock.name} (${sock.price})</h1>
+
+                <ErrorBoundary fallback={<h2 className="error">Socks inventory service down!!</h2>}>
+                    <SockInventory sock={sock} />
+                </ErrorBoundary>
 
                 <SockVariantSelector
                     sock={sock}
