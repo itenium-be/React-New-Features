@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ProductRepository from '../ProductRepository';
 import { SockModel, SockVariantModel } from '../models';
 import SockReviews from './SockReviews';
@@ -18,7 +18,7 @@ const SockPage: React.FC<SockPageProps> = ({ match }) => {
     return (
         <div className="product">
             <div className="product-image">
-                <img src={`/assets/socks-${sock.brand}-${selectedVariant.color}.jpg`} />
+                <img src={`/assets/socks-${sock.brand}-${selectedVariant.color}.jpg`} alt="Sock Variant" />
             </div>
             <div className="product-info">
                 <h1>{sock.name} (${sock.price})</h1>

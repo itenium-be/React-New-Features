@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react';
+import React/*, { Fragment }*/ from 'react';
 import cn from 'classnames';
 import { SockModel } from '../models';
-import ErrorBoundary from './ErrorBoundary';
 
 const ErrorBoundaryTesting = false;
 
@@ -15,11 +14,11 @@ const SockInventory: React.FC<SockInventoryProps> = ({ sock }) => {
     }
 
     return (
-        <>
+        <div>
             {sock.inventory > 0 ? (
-                <React.Fragment>{sock.inventory} left in stock</React.Fragment>
+                <div>{sock.inventory} left in stock</div>
             ) : (
-                <Fragment>Out of stock</Fragment>
+                <div>Out of stock</div>
             )}
 
             <button
@@ -28,7 +27,7 @@ const SockInventory: React.FC<SockInventoryProps> = ({ sock }) => {
             >
                 Add to cart
             </button>
-        </>
+        </div>
     );
 }
 
