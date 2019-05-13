@@ -1,6 +1,7 @@
 import React from 'react';
 import { SockModel } from '../models';
 import { Link } from 'react-router-dom';
+import SockFavourite from './SockFavourite';
 
 type SockProps = {
     sock: SockModel
@@ -9,6 +10,7 @@ type SockProps = {
 const SockLine: React.FC<SockProps> = ({ sock }) => {
     return (
         <div className="product-line">
+            <SockFavourite sock={sock} />
             <h2>
                 {sock.name}
             </h2>

@@ -1,6 +1,6 @@
 import React from 'react';
-import ProductRepository from '../ProductRepository';
 import { SockModel } from '../models';
+import SockReviewForm from './SockReviewForm';
 
 type SockReviewsProps = {
     sock: SockModel
@@ -8,10 +8,22 @@ type SockReviewsProps = {
 
 const SockReviews: React.FC<SockReviewsProps> = ({ sock }) => {
     return (
-        <div className="review-form">
+        <>
+            <SockReviewForm sock={sock} />
+            <SockReviewsDisplay sock={sock} />
+        </>
+    );
+}
+
+
+
+const SockReviewsDisplay: React.FC<SockReviewsProps> = ({ sock }) => {
+    return (
+        <div className="reviews">
             REVIEWS: {sock.reviews.length}
         </div>
     );
 }
+
 
 export default SockReviews;

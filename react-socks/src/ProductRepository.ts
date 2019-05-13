@@ -1,8 +1,6 @@
 import { productList } from './assets/socks-data';
 import { SockModel } from './models';
 
-const TIMEOUT = 2500;
-
 const empty = (): SockModel => ({
     id: 0,
     name: '',
@@ -13,6 +11,8 @@ const empty = (): SockModel => ({
     reviews: []
 });
 
+const favs: SockModel[] = [];
+
 
 const ProductRepository = {
     getSock(sockId: number): SockModel {
@@ -20,10 +20,18 @@ const ProductRepository = {
         return sock || empty();
     },
 
-    getSockAsync(sockId: number): Promise<SockModel> {
-        const sock = this.getSock(sockId);
-        return new Promise(resolve => setTimeout(() => resolve(sock), TIMEOUT));
-    }
+    favouriteSock(sock: SockModel): void {
+        
+    },
+    getFavorites(): SockModel[] {
+        return favs;
+    },
+
+    // getSockAsync(sockId: number): Promise<SockModel> {
+    //     const TIMEOUT = 2500;
+    //     const sock = this.getSock(sockId);
+    //     return new Promise(resolve => setTimeout(() => resolve(sock), TIMEOUT));
+    // }
 };
 
 export default ProductRepository;

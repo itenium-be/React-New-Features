@@ -1,5 +1,4 @@
 import React from 'react';
-import ProductRepository from '../ProductRepository';
 import { SockModel, SockVariantModel } from '../models';
 import cn from 'classnames';
 

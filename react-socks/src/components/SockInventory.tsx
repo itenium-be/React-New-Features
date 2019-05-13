@@ -32,3 +32,8 @@ const SockInventory: React.FC<SockInventoryProps> = ({ sock }) => {
 }
 
 export default SockInventory;
+
+// TODO: The button onClick handler does a `sock.inventory--`
+// This is a direct mutation of state; React does not realise
+// this, so the stock is only updated by switching views    :
+// Use the back button and click same socks "Details" button.
