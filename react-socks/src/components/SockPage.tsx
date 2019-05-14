@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProductRepository from '../data/ProductRepository';
 import { SockModel, SockVariantModel } from '../models';
 import SockReviews from './SockReviews';
@@ -14,7 +14,7 @@ type SockPageProps = {
 const SockPage: React.FC<SockPageProps> = ({ match }) => {
     const sockId: number = parseInt(match.params.id, 10);
     const sock: SockModel = ProductRepository.getSock(sockId);
-    const selectedVariant = sock.variants[0];
+    const [selectedVariant, setSelectedVariant] = useState(sock.variants[0]);
 
     return (
         <div className="product">
@@ -30,13 +30,13 @@ const SockPage: React.FC<SockPageProps> = ({ match }) => {
                 <SockVariantSelector
                     sock={sock}
                     variant={selectedVariant}
-                    setVariant={(newVariant: SockVariantModel) => console.log('selecting', newVariant)}
+                    setVariant={(newVariant: SockVariantModel) => setSelectedVariant(newVariant)}
                 />
 
                 <SockReviews sock={sock} />
             </div>
         </div>
     );
-}
+};
 
 export default SockPage;
