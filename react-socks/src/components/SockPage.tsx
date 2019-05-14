@@ -7,6 +7,7 @@ import SockInventory from './SockInventory';
 import ErrorBoundary from './ErrorBoundary';
 import SockImage from './SockImage';
 
+
 type SockPageProps = {
     match: { params: { id: string } }
 }

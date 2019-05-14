@@ -1,6 +1,7 @@
 import React/*, { Fragment }*/ from 'react';
 import cn from 'classnames';
 import { SockModel } from '../models';
+import CardRepository from '../data/CartRepository';
 
 const ErrorBoundaryTesting = false;
 
@@ -23,7 +24,7 @@ const SockInventory: React.FC<SockInventoryProps> = ({ sock }) => {
 
             <button
                 className={cn('add-to-cart', { disabledButton: sock.inventory <= 0 })}
-                onClick={() => sock.inventory--}
+                onClick={() => CardRepository.addToCart(sock, sock.variants[0]) }
             >
                 Add to cart
             </button>

@@ -14,6 +14,10 @@ const CartRepository = {
     addToCart(sock: SockModel, variant: SockVariantModel): void {
         sock.inventory--;   
         cartContents.push({sock, variant});
+    },
+
+    isInCard(sock: SockModel) {
+        return cartContents.map(x => x.sock).indexOf(sock) !== -1;
     }
 };
 
