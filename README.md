@@ -9,11 +9,14 @@ React
 ## Run
 
 ```bash
-git clone https://github.com/my-user-name/React-New-Features
+# Fork https://github.com/itenium-be/React-New-Features on Github
+
+git clone https://github.com/your-user-name/React-New-Features
 cd React-New-Features/react-socks
 npm install
 npm start
 ```
+
 
 ## Cheat Sheet
 
