@@ -1,5 +1,5 @@
-import { productList } from './assets/socks-data';
-import { SockModel } from './models';
+import { productList } from './socks-data';
+import { SockModel } from '../models';
 
 const empty = (): SockModel => ({
     id: 0,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 
 
@@ -21,7 +21,7 @@ class SocksDetails extends React.Component {
 
 
 
-class App extends React.Component {
+class App extends React.Component<{}, {lang: string}> {
     constructor(props: any) {
         super(props);
         this.state = { lang: 'nl' };
@@ -31,9 +31,16 @@ class App extends React.Component {
         return (
             <AppContext.Provider value={this.state}>
                 <SocksDetails />
+                <SocksImage />
             </AppContext.Provider>
         );
     }
+}
+
+
+const SocksImage = () => {
+    const context = useContext(AppContext);
+    return <div>Image for locale: {context.lang}</div>;
 }
 
 

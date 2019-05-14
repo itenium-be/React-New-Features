@@ -1,10 +1,11 @@
 import React from 'react';
-import ProductRepository from '../ProductRepository';
+import ProductRepository from '../data/ProductRepository';
 import { SockModel, SockVariantModel } from '../models';
 import SockReviews from './SockReviews';
 import SockVariantSelector from './SockVariantSelector';
 import SockInventory from './SockInventory';
 import ErrorBoundary from './ErrorBoundary';
+import SockImage from './SockImage';
 
 type SockPageProps = {
     match: { params: { id: string } }
@@ -17,9 +18,8 @@ const SockPage: React.FC<SockPageProps> = ({ match }) => {
 
     return (
         <div className="product">
-            <div className="product-image">
-                <img src={`/assets/socks-${sock.brand}-${selectedVariant.color}.jpg`} alt="Sock Variant" />
-            </div>
+            <SockImage sock={sock} variant={selectedVariant} />
+            
             <div className="product-info">
                 <h1>{sock.name} (${sock.price})</h1>
 

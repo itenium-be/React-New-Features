@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CartRepository from '../CartRepository';
+import CartRepository from '../data/CartRepository';
 
 function HeaderCartLink() {
     return (

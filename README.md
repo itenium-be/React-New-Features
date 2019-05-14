@@ -30,7 +30,18 @@ Voor tijdens de oefeningen misschien handig :)
 - Suspense & lazy: Code-Splitting. Data Fetching will arrive later!
 - Memo: Component and PureComponent (no `shouldComponentUpdate`) + FunctionComponent and Memo.
 - Context: Global variables: Current locale, UI theme, current user, ...
-- Hooks: Lifecycle methods in FunctionComponents!?
+- Hooks: Use class Component features in FunctionComponents!
+    - Extract cross cutting concerns in separate hooks instead of littering Component Lifecycle methods
+    - Convention: Hook names start with `use`. (Linting rule)
+    - Limitation: Branching is not allowed before any hook call. (no `if () { useHook() }`)
+    - Builtin hooks:
+        - [State Hook](https://reactjs.org/docs/hooks-state.html): `useState`
+        - [Effect Hook](https://reactjs.org/docs/hooks-effect.html): `useEffect`
+        - [Context Hook](https://reactjs.org/docs/hooks-reference.html#usecontext): `useContext`
+        - [`useReducer`](https://reactjs.org/docs/hooks-reference.html#usereducer)
+        - [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) and [`useMemo`](https://reactjs.org/docs/hooks-reference.html#usememo): Memoize result
+        - ... and more or [create your own](https://reactjs.org/docs/hooks-custom.html)
+
 
 
 ## create-react-app

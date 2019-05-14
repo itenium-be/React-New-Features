@@ -1,4 +1,4 @@
-import { CartModel, SockModel, SockVariantModel } from './models';
+import { CartModel, SockModel, SockVariantModel } from '../models';
 
 const cartContents: CartModel[] = [];
 
