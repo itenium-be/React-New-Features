@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ProductRepository from '../data/ProductRepository';
 import { SockModel, SockVariantModel } from '../models';
 import SockReviews from './SockReviews';
@@ -15,6 +15,15 @@ const SockPage: React.FC<SockPageProps> = ({ match }) => {
     const sockId: number = parseInt(match.params.id, 10);
     const sock: SockModel = ProductRepository.getSock(sockId);
     const selectedVariant = sock.variants[0];
+    let oldTitle: string = document.title;
+
+    useEffect(() => {
+        document.title = `${oldTitle} - ${sock.name}`;
+
+        return () => {
+            document.title = oldTitle;
+        }
+    });
 
     return (
         <div className="product">
@@ -37,6 +46,6 @@ const SockPage: React.FC<SockPageProps> = ({ match }) => {
             </div>
         </div>
     );
-}
+};
 
 export default SockPage;
