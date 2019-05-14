@@ -17,6 +17,13 @@ npm install
 npm start
 ```
 
+Of als je het vergeten bent te forken:
+
+```bash
+git remote rm origin
+git remote add origin https://github.com/your-user-name/React-New-Features
+```
+
 
 ## Cheat Sheet
 
