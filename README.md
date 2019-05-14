@@ -17,7 +17,7 @@ npm install
 npm start
 ```
 
-Of als je het vergeten bent te clonen:
+Of als je het vergeten bent te forken:
 
 ```bash
 git remote rm origin
