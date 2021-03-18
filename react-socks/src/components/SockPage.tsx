@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ProductRepository from '../data/ProductRepository';
-import { SockModel, SockVariantModel } from '../models';
+import {SockModel, SockVariantModel} from '../models';
 import SockReviews from './SockReviews';
 import SockVariantSelector from './SockVariantSelector';
 import SockInventory from './SockInventory';
@@ -28,7 +28,7 @@ const SockPage: React.FC<SockPageProps> = ({ match }) => {
     return (
         <div className="product">
             <SockImage sock={sock} variant={selectedVariant} />
-            
+
             <div className="product-info">
                 <h1>{sock.name} (${sock.price})</h1>
 
