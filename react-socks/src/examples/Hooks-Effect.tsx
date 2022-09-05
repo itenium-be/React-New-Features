@@ -85,7 +85,7 @@ function FriendStatusWithCleanup(props: any) {
 // Extract in a custom hook
 
 function useFriendStatus(friendID: number) {
-    const [isOnline, setIsOnline] = useState(null);
+    const [isOnline, setIsOnline] = useState<boolean | null>(null);
 
     useEffect(() => {
         function handleStatusChange(status: any) {
